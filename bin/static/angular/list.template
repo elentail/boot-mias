@@ -1,0 +1,5 @@
+<div>
+	<ul>
+		<li ng-repeat='d in $ctrl.datas'>{{d}}</li>
+	</ul>
+</div>
