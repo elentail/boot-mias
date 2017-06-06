@@ -16,7 +16,7 @@ public class IndexController {
 	public String doTest(Model model,
 			@RequestParam(value="op",defaultValue="test")String operator){
 		model.addAttribute("params",operator);
-		return "test";
+		return "mias";
 	}
 	@RequestMapping("/getname")
 	public @ResponseBody List<String> sendData(){
