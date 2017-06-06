@@ -1,10 +1,9 @@
 /**
  * 
  */
+(function(){
 'use strict';
-var rkapp = angular.module('rkapp',[]);
-
-rkapp.
+angular.module('rk.mias').
 factory('RoiList',function(){
 	var memfunc = {};
 	var memList = ['RK','SUB','JM'];
@@ -13,3 +12,4 @@ factory('RoiList',function(){
 	}
 	return memfunc;
 });
+})();

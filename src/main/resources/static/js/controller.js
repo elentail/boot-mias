@@ -1,10 +1,9 @@
 /**
  * 
  */
+(function(){
 'use strict';
-var rkapp = angular.module('rkapp',[]);
-
-
+/*
 rkapp.
 factory('RoiList',function(){
 	var memfunc = {};
@@ -14,12 +13,20 @@ factory('RoiList',function(){
 	}
 	return memfunc;
 });
-
-rkapp.
+*/
+angular.module('rk.mias').
 component('rkList',{
 	templateUrl : 'angular/list.template',
 	controller : ['$http','RoiList',function($http,RoiList){
 		var self = this;
-		self.datas = RoiList.getList();
+		
+		$http.get('/getname').then(function pass(response){
+			console.log('PASS');
+			self.datas = response.data;
+			
+		},function fail(reponse){
+			self.datas = RoiList.getList();
+		});
 	}]
 });
+})();

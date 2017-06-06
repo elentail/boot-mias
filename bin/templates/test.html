@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <title th:text="#{roadking.project}">Insert title here</title>
+
 </head>
-<body ng-app="rkapp">
+<body ng-app="rk.mias">
 	<p th:text="${params}"></p>
 	<rk-list></rk-list>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script th:src="@{/js/apps.js}" src="../static/js/apps.js"></script>
-<!-- <script th:src="@{/js/service.js}" src="../static/js/service.js"></script> -->
+<script th:src="@{/js/service.js}" src="../static/js/service.js"></script>
 <script th:src="@{/js/controller.js}" src="../static/js/controller.js"></script>
 </html>
